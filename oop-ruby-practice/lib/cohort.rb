@@ -13,4 +13,16 @@ class Cohort
   def enroll(student)
     @students << student unless @students.include?(student)
   end
+
+  def assign(system_check)
+    @system_checks << system_check
+  end
+
+  def roster
+    roster = "#{@title}"
+    @students.each do |student|
+      roster += student.name + student.email
+    end
+    roster
+  end
 end
