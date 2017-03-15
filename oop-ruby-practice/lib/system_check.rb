@@ -17,4 +17,14 @@ class SystemCheck
     end
     @average = sum.to_f / @submissions.length
   end
+
+  def did_student_complete_system_check?(student)
+    complete = false
+    @submissions.each do |submission|
+      if submission.student.name == student.name
+        return true
+      end
+    end
+    complete
+  end
 end
