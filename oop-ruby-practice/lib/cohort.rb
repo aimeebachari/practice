@@ -25,4 +25,8 @@ class Cohort
     end
     roster
   end
+
+  def system_check_completed?(system_check)
+    @students.all? { |student| system_check.did_student_complete_system_check?(student) }
+  end
 end
