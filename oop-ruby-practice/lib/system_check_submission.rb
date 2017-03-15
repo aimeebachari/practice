@@ -16,6 +16,14 @@ class SystemCheckSubmission
       raise InvalidGradeError
     end
   end
+
+  def graded?
+    if @grade == nil
+      false
+    else
+      true
+    end
+  end
 end
 
 class InvalidGradeError < StandardError
