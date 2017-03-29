@@ -1,4 +1,4 @@
-class User < ApplicationRecord::Base
+class User < ActiveRecord::Base
   has_many :projects
 
   validates :name, presence: true
