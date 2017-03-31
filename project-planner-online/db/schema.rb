@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 20170329135959) do
   end
 
   create_table "user_projects", force: :cascade do |t|
-    t.integer "projects_id"
-    t.integer "users_id"
+    t.integer "user_id"
+    t.integer "project_id"
   end
 
   create_table "users", force: :cascade do |t|

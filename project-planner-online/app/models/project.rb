@@ -1,5 +1,5 @@
 class Project < ActiveRecord::Base
-  has_many :users
+  has_many :users, through: :user_projects
 
   validates :name, presence: true
 end
